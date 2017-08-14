@@ -49,10 +49,6 @@ print(my_solution)
 # Check that your data frame has 418 entries
 print(my_solution.shape)
 
-# Write your solution to a csv file with the name my_solution.csv
-my_solution.to_csv("my_solution.csv", index_label = ["PassengerId"])
-print(my_solution)
-
 # Create a new array with the added features: features_two
 features_two = train[["Pclass","Age","Sex","Fare", "SibSp", "Parch", "Embarked"]].values
 
@@ -80,4 +76,6 @@ my_tree_three = my_tree_three.fit(features_three, target)
 # Print the score of this decision tree
 print(my_tree_three.score(features_three, target))
 
-
+# Write your solution to a csv file with the name my_solution.csv
+my_solution.to_csv("my_solution.csv", index_label = ["PassengerId"])
+print(my_solution)
